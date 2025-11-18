@@ -1,0 +1,22 @@
+edges
+| DemoJsCodeInjection.js:18:9:18:12 | expr | DemoJsCodeInjection.js:19:23:19:26 | expr | provenance |  |
+| DemoJsCodeInjection.js:18:16:18:35 | req.query.expression | DemoJsCodeInjection.js:18:9:18:12 | expr | provenance |  |
+| DemoJsCodeInjection.js:25:9:25:12 | code | DemoJsCodeInjection.js:26:27:26:30 | code | provenance |  |
+| DemoJsCodeInjection.js:25:16:25:23 | req.body | DemoJsCodeInjection.js:25:9:25:12 | code | provenance |  |
+| DemoJsCodeInjection.js:32:9:32:14 | action | DemoJsCodeInjection.js:33:14:33:19 | action | provenance |  |
+| DemoJsCodeInjection.js:32:18:32:33 | req.query.action | DemoJsCodeInjection.js:32:9:32:14 | action | provenance |  |
+nodes
+| DemoJsCodeInjection.js:18:9:18:12 | expr | semmle.label | expr |
+| DemoJsCodeInjection.js:18:16:18:35 | req.query.expression | semmle.label | req.query.expression |
+| DemoJsCodeInjection.js:19:23:19:26 | expr | semmle.label | expr |
+| DemoJsCodeInjection.js:25:9:25:12 | code | semmle.label | code |
+| DemoJsCodeInjection.js:25:16:25:23 | req.body | semmle.label | req.body |
+| DemoJsCodeInjection.js:26:27:26:30 | code | semmle.label | code |
+| DemoJsCodeInjection.js:32:9:32:14 | action | semmle.label | action |
+| DemoJsCodeInjection.js:32:18:32:33 | req.query.action | semmle.label | req.query.action |
+| DemoJsCodeInjection.js:33:14:33:19 | action | semmle.label | action |
+subpaths
+#select
+| DemoJsCodeInjection.js:19:23:19:26 | expr | DemoJsCodeInjection.js:18:16:18:35 | req.query.expression | DemoJsCodeInjection.js:19:23:19:26 | expr | This code execution depends on a $@. | DemoJsCodeInjection.js:18:16:18:35 | req.query.expression | user-provided value |
+| DemoJsCodeInjection.js:26:27:26:30 | code | DemoJsCodeInjection.js:25:16:25:23 | req.body | DemoJsCodeInjection.js:26:27:26:30 | code | This code execution depends on a $@. | DemoJsCodeInjection.js:25:16:25:23 | req.body | user-provided value |
+| DemoJsCodeInjection.js:33:14:33:19 | action | DemoJsCodeInjection.js:32:18:32:33 | req.query.action | DemoJsCodeInjection.js:33:14:33:19 | action | This code execution depends on a $@. | DemoJsCodeInjection.js:32:18:32:33 | req.query.action | user-provided value |
