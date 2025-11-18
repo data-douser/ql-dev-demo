@@ -26,6 +26,6 @@ func OutOfMemoryGood(w http.ResponseWriter, r *http.Request) {
 	for i := 0; i < sink; i++ {
 		result[i] = fmt.Sprintf("Item %d", i+1)
 	}
-	w.Header().Set("Content-Type\", \"application/json")
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(result)
 }
