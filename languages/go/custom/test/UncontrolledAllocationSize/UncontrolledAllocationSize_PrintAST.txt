@@ -1,0 +1,12 @@
+Result set: edges
+| source | target | key | value |
++--------+--------+-----+-------+
+
+Result set: graphProperties
+|       key        | value |
++------------------+-------+
+| semmle.graphKind | tree  |
+
+Result set: nodes
+| node | key | value |
++------+-----+-------+
