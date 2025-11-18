@@ -1,0 +1,50 @@
+<!DOCTYPE qhelp PUBLIC
+  "-//Semmle//qhelp//EN"
+  "qhelp.dtd">
+<qhelp>
+<overview>
+<p>
+Allocating memory with a size controlled by an external user can result in integer overflow or
+excessive memory consumption, leading to denial of service (DoS) attacks.
+</p>
+
+</overview>
+<recommendation>
+
+<p>
+Ensure that allocation sizes are properly validated and restricted to reasonable limits before
+allocating memory. Consider using a maximum size constant or validating the size against known
+safe bounds.
+</p>
+
+</recommendation>
+<example>
+
+<p>
+In the following example, the allocation size is directly controlled by user input without
+validation:
+</p>
+
+<sample src="UncontrolledAllocationSizeBad.go" />
+
+<p>
+In the corrected example, the allocation size is validated against a maximum value before
+allocating:
+</p>
+
+<sample src="UncontrolledAllocationSizeGood.go" />
+
+</example>
+<references>
+
+<li>
+  OWASP:
+  <a href="https://owasp.org/www-community/vulnerabilities/Denial_of_Service">Denial of Service</a>.
+</li>
+<li>
+  CWE:
+  <a href="https://cwe.mitre.org/data/definitions/770.html">CWE-770: Allocation of Resources Without Limits or Throttling</a>.
+</li>
+
+</references>
+</qhelp>
